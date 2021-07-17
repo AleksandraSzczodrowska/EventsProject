@@ -1,4 +1,4 @@
-package com.sda.eventsproject.EventsProject;
+package com.sda.eventsproject.EventsProject.services;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
