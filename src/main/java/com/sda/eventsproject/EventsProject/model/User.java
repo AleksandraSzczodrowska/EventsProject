@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.util.Calendar;
 
 public class User {
+    public User() {
+    }
+
+    private String id;
     private String firstname;
     private String lastname;
     private Calendar dateofbirth;

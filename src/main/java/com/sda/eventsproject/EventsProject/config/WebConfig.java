@@ -6,7 +6,7 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ComponentScan(basePackages = "eventsproject")
+@ComponentScan(basePackages = "com.sda.eventsproject")
 public class WebConfig implements WebMvcConfigurer {
 
     @Override
