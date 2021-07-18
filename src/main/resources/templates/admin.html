@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Admin Page</title>
 </head>
 <body>
-
+<div th:replace="fragments :: menu"/>
+<div style="font-size: 50px">
+    <h1> Hello! </h1>
+    <h2>  It's a Admin page!</h2>
+</div>
+<div th:replace="fragments :: footer"/>
 </body>
 </html>

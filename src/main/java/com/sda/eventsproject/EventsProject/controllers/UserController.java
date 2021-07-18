@@ -13,7 +13,7 @@ public class UserController {
     @GetMapping("/newaccount")
     public String getAccount(Model model) {
         public String getAccount(Model model){
-            model.addAttribute("account", new User());
+            model.addAttribute("account", new User(""));
             return "new_account_form";
         }
     }
