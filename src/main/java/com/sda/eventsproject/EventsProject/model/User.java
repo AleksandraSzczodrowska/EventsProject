@@ -1,21 +1,24 @@
 package com.sda.eventsproject.EventsProject.model;
 
-import com.sun.istack.NotNull;
-
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.util.Calendar;
 
 public class User {
     public User() {
     }
-
+    @NotNull
     private String id;
     @NotNull
     private String firstname;
+    @NotNull
     private String lastname;
     private Calendar dateofbirth;
-    @Min(2)
+    @Size(min=2, max=15)
     private String login;
+    @NotNull
     private String password;
     @Email
     private String email;

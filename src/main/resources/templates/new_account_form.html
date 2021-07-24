@@ -12,27 +12,36 @@
     <div>
         <label>User Name:</label>
         <input id="lUserName" type="text" th:field="*{username}"/>
+        <td th:if="${#fields.hasErrors('User name')}" th:errors="*username">User name Error</td>
     </div>
     <div>
         <label>Password:</label>
         <input id="lPassword" type="text" th:field="*{password}"/>
+        <td th:if="${#fields.hasErrors('Password')}" th:errors="*password">Password Error</td>
     </div>
     <div>
         <label>First Name:</label>
         <input id="lFirstname" type="text" th:field="*{firstname}"/>
+        <td th:if="${#fields.hasErrors('First name')}" th:errors="*firstname">First name Error</td>
+        </div>
         <div>
             <label>Last Name:</label>
             <input id="lLastname" type="text" th:field="*{lastname}"/>
+            <td th:if="${#fields.hasErrors('Last name')}" th:errors="*lastname">Last name Error</td>
+            </div>
             <div>
                 <label>Date of birth:</label>
                 <input id="lDateheofbirth" type="text" th:field="*{dateofbirth}"/>
+                <td th:if="${#fields.hasErrors('Date of birth')}" th:errors="*dateofbirth">Date of birth Error</td>
             </div>
             <div>
                 <label> Display Name:</label>
                 <input id="lDisplayname" type="text" th:field="*{displayname}"/>
+                <td th:if="${#fields.hasErrors('Display name')}" th:errors="*displayname">Display name Error</td>
                 <div>
                     <label>Email:</label>
                     <input id="Email" type="text" th:field="*{email}"/>
+                    <td th:if="${#fields.hasErrors('Email')}" th:errors="*email">Email Error</td>
                 </div>
             </div>
         </div>
