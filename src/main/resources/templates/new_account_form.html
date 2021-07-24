@@ -5,6 +5,42 @@
     <title>new account form</title>
 </head>
 <body>
-
+<div th:fragment="menu">
+<div>Add new user</div>
+< class="container" th:action="@{/user/newuser}" method="post"
+      th:object="${user}" enctype="multipart/form-data">
+    <div>
+        <label>User Name:</label>
+        <input id="lUserName" type="text" th:field="*{username}"/>
+    </div>
+    <div>
+        <label>Password:</label>
+        <input id="lPassword" type="text" th:field="*{password}"/>
+    </div>
+    <div>
+        <label>First Name:</label>
+        <input id="lFirstname" type="text" th:field="*{firstname}"/>
+        <div>
+            <label>Last Name:</label>
+            <input id="lLastname" type="text" th:field="*{lastname}"/>
+            <div>
+                <label>Date of birth:</label>
+                <input id="lDateheofbirth" type="text" th:field="*{dateofbirth}"/>
+            </div>
+            <div>
+                <label> Display Name:</label>
+                <input id="lDisplayname" type="text" th:field="*{displayname}"/>
+                <div>
+                    <label>Email:</label>
+                    <input id="Email" type="text" th:field="*{email}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="submit"/>
+    <div th:fragment="footer">
+    </div>
+</div>
+</form>
 </body>
 </html>

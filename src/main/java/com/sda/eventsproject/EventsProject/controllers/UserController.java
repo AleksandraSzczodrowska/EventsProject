@@ -24,15 +24,15 @@ public class UserController {
     }
 
 
-    @GetMapping("/newaccount")
+    @GetMapping("/newuser") // url jaki w przedlagarce ma byc
     public String getAccount(Model model) {
         model.addAttribute("account", new User());
-        return "new_account_form";
+        return "new_account_form"; //dane polaczone pliku html
     }
 
-    @PostMapping()
-    public String addNewUser(User user) {
-        return "redirect:/newaccount/url";
+    @PostMapping("/")
+    public String addNewUser(@Valid @ModelAttribute User user) {
+        return "redirect:/user/newaccount";
     }
 
     @ModelAttribute("user")

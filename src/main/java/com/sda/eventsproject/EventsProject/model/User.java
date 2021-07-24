@@ -1,6 +1,8 @@
 package com.sda.eventsproject.EventsProject.model;
 
-import java.time.LocalDate;
+import com.sun.istack.NotNull;
+
+import javax.validation.constraints.Email;
 import java.util.Calendar;
 
 public class User {
@@ -8,12 +10,16 @@ public class User {
     }
 
     private String id;
+    @NotNull
     private String firstname;
     private String lastname;
     private Calendar dateofbirth;
+    @Min(2)
     private String login;
     private String password;
+    @Email
     private String email;
+    @NotBlank
     private String displayName;
 
     public User(String firstname, String lastname, Calendar dateofbirth, String login, String password, String email, String displayName) {
